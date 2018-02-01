@@ -1,0 +1,23 @@
+<center><h1>Add Your Address</h1><br><br>
+<%= form_with scope: :address, url: user_addresses_path(@user), local: true do |form| %>
+<table>
+<tr>
+  <td><%= form.label :'City' %></td>
+  <td><%= form.text_field :city %></td>
+  </tr>
+  <tr>
+  <td><%= form.label :'State' %></td>
+  <td><%= form.text_field :state %></td>
+  </tr>
+  <tr>
+  <td><%= form.label :'Country' %></td>
+  <td><%= form.text_field :country %></td>
+  </tr>
+  <tr>
+  <td><%= form.label :'Pin Code' %></td>
+  <td><%= form.text_field :pincode %></td>
+  </tr>
+  </table>  
+  <%=form.submit %>
+  <% end %>
+  </center>

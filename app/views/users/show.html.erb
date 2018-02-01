@@ -1,0 +1,33 @@
+
+<center>
+<table border="2">
+ <tr>
+   <td><strong>First Name: </strong></td>
+   <td><%= @user.first_name %></td><br>
+ </tr>
+ <tr>
+   <td><strong>Last Name:</strong></td>
+   <td> <%= @user.last_name %></td><br>
+  </tr>
+  <tr> 
+    <td><strong>Email:</strong></td>
+    <td><%= @user.email %></td><br>
+  </tr>
+  <tr>
+     <td><strong>Mobile:</strong></td>
+     <td><%= @user.mobile %></td><br>
+     </tr>
+   <tr>
+     <td><strong>Gender:</strong></td>
+     <td><%= @user.gender %></td><br>
+   </tr>
+   <tr>
+     <td><strong>Date Of Birth:</strong></td>
+     <td><%= @user.dob%></td><br>
+   </tr>    
+     </table><br>
+     <%= link_to 'Add Address', new_user_address_path(@user) %>
+     &nbsp; &nbsp;
+     <%= link_to 'Show All Users', users_path %>
+     </center>
+

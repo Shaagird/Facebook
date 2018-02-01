@@ -1,0 +1,54 @@
+<center><h1>New User Registration</h1>
+
+<%= form_with scope: :user, url: users_path, local: true do |form| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<table>
+	<tr>
+	<td><%= form.label :'First Name' %></td>
+	<td><%= form.text_field :first_name %></td>
+	</tr>
+
+	<tr>
+	<td><%= form.label :'Last Name' %></td>
+	<td><%= form.text_field :last_name %></td>
+	</tr>
+	<tr>
+	<td><%= form.label :'Date Of Birth' %></td>
+	<td><%= form.date_field :dob %></td>
+	</tr>
+	<tr>
+	<td><%= form.label :'Gender' %></td>
+	<td><%= form.text_field :gender %></td>
+	</tr>
+
+	<tr>
+	<td><%= form.label :Email %></td>
+	<td><%= form.text_field :email %></td>
+	</tr>
+	<tr>
+	<td><%= form.label :Mobile %></td>
+	<td><%= form.text_field :mobile %></td>
+	</tr>
+	<tr>
+	<td><%= form.label :Password %></td>
+	<td><%= form.password_field :password %></td>
+	</tr>
+	</table>
+	<%= form.submit %>
+	<%= link_to 'Show All Users', users_path %>
+	 <% end %>
+	 </center>
